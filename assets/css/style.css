@@ -1,0 +1,68 @@
+body {
+  background: beige url(../images/halftone.png) repeat scroll center top;
+}
+
+#main {
+  padding: 40px;
+  margin: 0 auto;
+  width: 800px;
+  /*
+  background-color: #fff;
+  border: 2px solid #ccc;
+  border-width: 0 2px;
+  */
+}
+
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+#title {
+  font-family: 'Pacifico', cursive;
+  font-size: 6em;
+  margin: 0;
+  line-height: 1em;
+  color: #2D6CBD;
+}
+
+#subtitle {
+  font-family: 'Nova Mono', monospace;
+  text-transform: uppercase;
+  font-size: 2.6em;
+  margin: 0.25em 0 1em;
+  color: #555;
+}
+
+#docs {
+  background: rgba(255,255,255,.5);
+  padding: 40px;
+}
+
+pre {
+  background: #fff;
+  padding: 20px;
+}
+
+#params {
+  /*
+  border-spacing: 20px;
+  border-collapse: separate;
+  */
+}
+
+#params th {
+  text-align: left;
+}
+
+#params td, #params th {
+  border-top: 1px solid #ddd;
+  padding: 20px;
+}
+
+span.optional {
+  display: block;
+  color: #888;
+  font-weight: normal;
+  font-style: italic;
+}

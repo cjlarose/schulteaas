@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Schulte as a Service</title>
+    <link href="http://fonts.googleapis.com/css?family=Nova+Mono|Pacifico" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="assets/css/normalize.css" type="text/css" />
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
+  </head>
+  <body>
+    <div id="main">
+      <header>
+        <h1 id="title">Schulte</h1>
+        <h2 id="subtitle">as a Service</h2>
+        <img src="assets/images/schulte-pixel.png" alt="Chris Schulte, at your service" />
+      </header>
+
+      <section id="docs">
+      <h2>API Documentation</h2>
+
+      <h3>Resource URL</h3>
+      <code>http://schulteasaservice.com/ticket</code>
+
+      <h3>Parameters</h3>
+      <table id="params">
+        <tbody>
+        <tr>
+          <th>title</th>
+          <td>A concise self-describing string for the ticket.</td>
+        </tr>
+        <tr>
+          <th>desciption</th>
+          <td>A detailed description of the problem at hand. Please provide
+          enough detail so that Schulte can help you out, but don't waste his
+          time with stupid tangents.</td>
+        </tr>
+        <tr>
+          <th>requester</th>
+          <td>E-mail address of the requesting user.</td>
+        </tr>
+        <tr>
+          <th>priority <span class="optional">optional</span></th>
+          <td>One of the following, in increasing order of priority:
+          <code>taster</code>, <code>pint</code>, <code>growler</code>,
+          <code>keg</code>, <code>bright_tank</code></td>
+        </tr>
+        </tbody>
+      </table>
+
+      <h3>Example Request</h3>
+      <code><strong>POST</strong> http://schulteasaservice.com/ticket</code>
+      <pre><code>
+{
+  "title": "Need help drinking beer",
+  "description": "Schulte, I have a lot of San Diego craft beer and I need your
+  help drinking it",
+  "priority": "growler"
+}
+      </code></pre>
+
+      </section>
+
+    </div>
+  </body>
+</html>
