@@ -8,6 +8,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Every Vagrant virtual environment requires a box to build off of.
   config.vm.box = "hashicorp/precise64"
 
+  # Nginx server
+  config.vm.network :forwarded_port, guest: 3000, host: 8000
+
   # Required for NFS to work
   config.vm.network :private_network, ip: '192.168.40.10'
 
@@ -17,6 +20,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provision "docker" do |d|
      d.pull_images "ubuntu"
      d.build_image GUEST_APPLICATION_PATH, :args => '-t "schulteaas"'
+     d.run "schulteaas", :daemonize => true, :args => "-p 3000:80"
   end
 
 end
